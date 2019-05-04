@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 19, 2019 12:41:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.bean.Messages" table="messages" catalog="hotel_management" optimistic-lock="version">
+        <id name="messageid" type="string">
+            <column name="messageid" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="email" type="string">
+            <column name="email" length="30" not-null="true" />
+        </property>
+        <property name="messagetitle" type="string">
+            <column name="messagetitle" length="30" not-null="true" />
+        </property>
+        <property name="messagebody" type="string">
+            <column name="messagebody" length="200" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 19, 2019 12:41:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.bean.Newemployee" table="newemployee" catalog="hotel_management" optimistic-lock="version">
+        <id name="employeeid" type="java.lang.Integer">
+            <column name="employeeid" />
+            <generator class="identity" />
+        </id>
+        <property name="firstname" type="string">
+            <column name="firstname" length="20" not-null="true" />
+        </property>
+        <property name="lastname" type="string">
+            <column name="lastname" length="20" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" not-null="true" />
+        </property>
+        <property name="phonenumber" type="string">
+            <column name="phonenumber" length="11" not-null="true" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="100" not-null="true" />
+        </property>
+        <property name="dob" type="date">
+            <column name="dob" length="10" not-null="true" />
+        </property>
+        <property name="gender" type="string">
+            <column name="gender" length="7" not-null="true" />
+        </property>
+        <property name="nextofkin" type="string">
+            <column name="nextofkin" length="50" not-null="true" />
+        </property>
+        <property name="nextofkinphone" type="string">
+            <column name="nextofkinphone" length="11" not-null="true" />
+        </property>
+        <property name="department" type="string">
+            <column name="department" length="20" not-null="true" />
+        </property>
+        <property name="approvaldate" type="date">
+            <column name="approvaldate" length="10" not-null="true" />
+        </property>
+        <property name="addedby" type="string">
+            <column name="addedby" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

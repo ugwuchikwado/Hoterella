@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 19, 2019 12:41:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.bean.Reservation" table="reservation" catalog="hotel_management" optimistic-lock="version">
+        <id name="id" type="string">
+            <column name="id" length="15" />
+            <generator class="assigned" />
+        </id>
+        <property name="fname" type="string">
+            <column name="fname" length="40" not-null="true" />
+        </property>
+        <property name="lname" type="string">
+            <column name="lname" length="40" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="30" not-null="true" />
+        </property>
+        <property name="phonenumber" type="string">
+            <column name="phonenumber" length="12" not-null="true" />
+        </property>
+        <property name="checkInDate" type="date">
+            <column name="check_in_date" length="10" not-null="true" />
+        </property>
+        <property name="checkInTime" type="string">
+            <column name="check_in_time" length="10" not-null="true" />
+        </property>
+        <property name="checkOutDate" type="date">
+            <column name="check_out_date" length="10" not-null="true" />
+        </property>
+        <property name="checkOutTime" type="string">
+            <column name="check_out_time" length="10" not-null="true" />
+        </property>
+        <property name="medicalCondition" type="string">
+            <column name="medical_condition" length="200" not-null="true" />
+        </property>
+        <property name="payableAmount" type="double">
+            <column name="payable_amount" precision="22" scale="0" not-null="true" />
+        </property>
+        <property name="roomCategory" type="string">
+            <column name="room_category" length="30" not-null="true" />
+        </property>
+        <property name="roomPosition" type="string">
+            <column name="room_position" length="30" not-null="true" />
+        </property>
+        <property name="roomNumber" type="string">
+            <column name="room_number" length="30" not-null="true" />
+        </property>
+        <property name="paymentStatus" type="string">
+            <column name="payment_status" length="20" not-null="true" />
+        </property>
+        <property name="checkedby" type="string">
+            <column name="checkedby" length="30" not-null="true" />
+        </property>
+        <property name="paymentMethod" type="string">
+            <column name="payment_method" length="15" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

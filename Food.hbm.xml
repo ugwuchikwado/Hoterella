@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Mar 19, 2019 12:41:22 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.bean.Food" table="food" catalog="hotel_management" optimistic-lock="version">
+        <id name="foodid" type="string">
+            <column name="foodid" length="20" />
+            <generator class="assigned" />
+        </id>
+        <property name="name" type="string">
+            <column name="name" length="50" not-null="true" />
+        </property>
+        <property name="category" type="string">
+            <column name="category" length="50" not-null="true" />
+        </property>
+        <property name="quantity" type="string">
+            <column name="quantity" length="100" not-null="true" />
+        </property>
+        <property name="unitprice" type="int">
+            <column name="unitprice" not-null="true" />
+        </property>
+        <property name="purchasedate" type="string">
+            <column name="purchasedate" length="40" not-null="true" />
+        </property>
+        <property name="checkedby" type="string">
+            <column name="checkedby" length="20" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
